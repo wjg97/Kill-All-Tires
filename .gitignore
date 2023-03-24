@@ -13,6 +13,10 @@
 
 # misc
 .DS_Store
+<<<<<<< HEAD
+=======
+.env
+>>>>>>> 601ea4e520eb8061c7d531b41deeea34609263b5
 .env.local
 .env.development.local
 .env.test.local
@@ -21,6 +25,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 node_modules
 node_modules
 node_modules
+=======
+
+>>>>>>> 601ea4e520eb8061c7d531b41deeea34609263b5

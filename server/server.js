@@ -4,7 +4,11 @@ const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas');
+<<<<<<< HEAD
 const db = require('./config/connection');
+=======
+const db = require('./config/connections');
+>>>>>>> 601ea4e520eb8061c7d531b41deeea34609263b5
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -23,7 +27,13 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+<<<<<<< HEAD
 });
+=======
+}); 
+
+// Create a new instance of an Apollo server with the GraphQL schema
+>>>>>>> 601ea4e520eb8061c7d531b41deeea34609263b5
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
@@ -37,4 +47,11 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
   };
   
+<<<<<<< HEAD
   startApolloServer(typeDefs, resolvers);
+=======
+
+// Call the async function to start the server
+  startApolloServer(typeDefs, resolvers);
+
+>>>>>>> 601ea4e520eb8061c7d531b41deeea34609263b5

@@ -2,8 +2,8 @@
   "name": "kill-all-tires",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
   "main": "server.js",
+}  
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
@@ -22,7 +22,7 @@
   },
     "devDependencies": {
     "nodemon": "^2.0.3"
-
+  }
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -36,5 +36,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0"
+
+    "nodemon": "^2.0.3",
+    "concurrently": "^5.1.0"
+
   }
-}
