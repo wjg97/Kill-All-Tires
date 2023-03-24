@@ -1,14 +1,14 @@
 {
-  "name": "kill-all-tires",
+  "name": "mern-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seed.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "node seeders/seed.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,8 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8"
   },
-    "devDependencies": {
+  "devDependencies": {
     "nodemon": "^2.0.3"
-        "concurrently": "^5.1.0"
   }
 }
