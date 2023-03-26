@@ -7,9 +7,9 @@ const Main = () => {
         <div className="overlay"></div>
       <video src={driftGif} autoPlay loop muted />
       <div className="content">
-      <img src={logo} />
-        <h1>KILL ALL TIRES.</h1>
-        <p>EST. 2023.</p>
+      <img classname="rotate" src={logo} alt="stock car video"/>
+        <h1 className="animate">KILL ALL TIRES</h1>
+        <p className="animate2">EST. 2023.</p>
       </div>
       <div className="signupContainer">
         <h1>Signup for an account!</h1>
