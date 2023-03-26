@@ -11,7 +11,7 @@ const Main = () => {
         <h1 className="animate">KILL ALL TIRES</h1>
         <p className="animate2">EST. 2023.</p>
       </div>
-      <div className="signupContainer">
+      {/* <div className="signupContainer">
         <h1>Signup for an account!</h1>
 
         <input
@@ -35,7 +35,7 @@ const Main = () => {
         > 
         Enter a password
         </input>
-    </div>
+    </div> */}
     </div>
   );
 }
