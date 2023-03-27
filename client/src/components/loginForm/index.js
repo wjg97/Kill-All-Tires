@@ -1,28 +1,20 @@
-import React from "react"
+import React from "react";
 
 const login = () => {
-    console.log("You are signing into an account")
-}
+  console.log("You are signing into an account");
 
-return (
+  return (
     <div className="loginContainer">
-        <h1>Login to an account!</h1>
+      <h1>Login to an account!</h1>
 
-        <input
-            name="username"
-            placeholder="username"
-            required
-        > 
+      <input name="username" placeholder="username" required>
         Enter a username
-        </input>
-        <input
-            name="password"
-            placeholder="password"
-            required
-        > 
+      </input>
+      <input name="password" placeholder="password" required>
         Enter a password
-        </input>
+      </input>
     </div>
-)
+  );
+};
 
 export default login;

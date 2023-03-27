@@ -7,35 +7,39 @@ const Main = () => {
         <div className="overlay"></div>
       <video src={driftGif} autoPlay loop muted />
       <div className="content">
-      <img classname="rotate" src={logo} alt="stock car video"/>
+      <img className="rotate" src={logo} alt="KAT logo"/>
         <h1 className="animate">KILL ALL TIRES</h1>
         <p className="animate2">EST. 2023.</p>
       </div>
-      {/* <div className="signupContainer">
-        <h1>Signup for an account!</h1>
+      <div className="signupContainer">
+        <h1>Signup for an account</h1>
 
+
+        <p>Enter a username</p>
         <input
             name="username"
             placeholder="username"
             required
-        > 
-        Enter a username
-        </input>
+        /> 
+    
+        <p>Enter an email</p>
         <input
             name="email"
             placeholder="email"
             required
-        > 
-        Enter an email
-        </input>
+        /> 
+        <p>Enter a password</p>
         <input
             name="password"
             placeholder="password"
+            autoComplete="off"
             required
-        > 
-        Enter a password
-        </input>
-    </div> */}
+        /> 
+        
+
+        <button> Submit </button>
+       
+    </div>
     </div>
   );
 }
