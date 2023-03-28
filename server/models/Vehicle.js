@@ -23,6 +23,10 @@ const vehicleSchema = new Schema({
         minlength: 1,
         maxlength: 4,
     },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
 });
 
 const Vehicle = model('Vehicle', vehicleSchema);
