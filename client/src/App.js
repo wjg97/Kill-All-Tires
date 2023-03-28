@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,6 +7,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './components/Header';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -32,4 +33,19 @@ const httpLink = createHttpLink({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
-import { setContext } from '@apollo/client/link/context';
+
+// this is just a sample App for now, I am just adding this to do some testing. 
+// feel free to overwrite this if need be!
+  function App() {
+    return (
+      <ApolloProvider client={client}>
+        <Router>
+          <div className="flex-column justify-flex-start min-100-vh"> 
+            <Header />
+            </div>
+        </Router>
+      </ApolloProvider>
+    );
+  }
+  
+  export default App;
