@@ -9,24 +9,24 @@ const resolvers = {
       return User.find().populate("vehicles");
     },
     // user will return a single user and their vehicles
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate("vehicles");
+    user: async (parent, { userId }) => {
+      return User.findOne({ userId }).populate("vehicles").populate("appointments");
     },
     // vehicles will return all vehicles
     vehicles: async () => {
-      return Vehicle.find();
+      return Vehicle.find().populate("user");
     },
     // vehicle will return a single vehicle
-    vehicle: async (parent, { _id }) => {
-      return Vehicle.findOne({ _id });
+    vehicle: async (parent, { vehicleId }) => {
+      return Vehicle.findOne({ vehicleId }).populate("user");
     },
     // appointments will return all appointments
     appointments: async () => {
-      return Appointment.find();
+      return Appointment.find().populate("user").populate("vehicle");
     },
     // appointment will return a single appointment
-    appointment: async (parent, { _id }) => {
-      return Appointment.findOne({ _id });
+    appointment: async (parent, { appointmentId }) => {
+      return Appointment.findOne({ appointmentId }).populate("user").populate("vehicle");
     },
     // me will return a single user and their vehicles
     me: async (parent, args, context) => {
@@ -38,6 +38,7 @@ const resolvers = {
   },
 
   Mutation: {
+    // include user token in headers to test 
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
@@ -60,10 +61,9 @@ const resolvers = {
 
       return { token, user };
     },
-    // TODO:  In GraphQL server, add vehicle returns error that we must be logged in before adding vehicle. Unsure how to test adding vehicle with user logged in.
-    addVehicle: async (parent, { make, model, year }, context) => {
+    addVehicle: async (parent, { make, model, year, userId }, context) => {
       if (context.user) {
-        const vehicle = await Vehicle.create({ make, model, year });
+        const vehicle = await Vehicle.create({ make, model, year, user: userId });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
@@ -89,21 +89,23 @@ const resolvers = {
         return vehicle;
       }
     },
-    addAppointment: async (parent, { date, time, location, notes }, context) => {
+    // **exhibits error ""message": "Cannot read properties of undefined (reading '_id')""**
+    // Issue corrected by changing `vehicleId / userId: context.vehicle._id / user._id,` to `vehicleId, userId`
+    addAppointment: async (parent, { date, time, userId, vehicleId }, context) => {
       if (context.user) {
         const appointment = await Appointment.create({
           date,
           time,
-          vehicle: context.user.vehicles._id,
-          user: context.user.username,
+          vehicle: vehicleId,
+          user: userId,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { appointments: appointment._id } }
-        );
+          );
 
-        return appointment;
+        return appointment.populate('user');
       }
       throw new AuthenticationError("You need to be logged in!");
     },

@@ -10,6 +10,7 @@ const typeDefs = gql`
     email: String
     password: String
     vehicles: [Vehicle]
+    appointments: [Appointment]
   }
   type Vehicle {
     _id: ID
@@ -32,11 +33,11 @@ const typeDefs = gql`
 #   Define the queries that will be available to the client
   type Query {
     users: [User]
-    user(username: String!): User
+    user(userId: ID!): User
     vehicles: [Vehicle]
-    vehicle(_id: ID!): Vehicle
+    vehicle(vehicleId: ID!): Vehicle
     appointments: [Appointment]
-    appointment(_id: ID!): Appointment
+    appointment(appointmentId: ID!): Appointment
     me: User
   }
 #   Define the mutations that will be available to the client
@@ -44,9 +45,9 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addVehicle(make: String!, model: String!, year: Int!, userId: String): Vehicle
-    removeVehicle(_id: ID!): Vehicle
+    removeVehicle(vehicleId: ID!): Vehicle
     addAppointment(date: String!, time: String!, vehicleId: String!, userId: String): Appointment
-    removeAppointment(_id: ID!): Appointment
+    removeAppointment(appointmentId: ID!): Appointment
   }
 `;
 module.exports = typeDefs;
