@@ -13,10 +13,12 @@ const appointmentSchema = new Schema({
     vehicle: {
         type: Schema.Types.ObjectId,
         ref: 'Vehicle',
+        required: true,
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+        required: true,
     },
 });
 

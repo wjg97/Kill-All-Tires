@@ -10,7 +10,7 @@ const resolvers = {
     },
     // user will return a single user and their vehicles
     user: async (parent, { userId }) => {
-      return User.findOne({ userId }).populate("vehicles").populate("appointments");
+      return await User.findOne({ userId }).populate("vehicles").populate("appointments");
     },
     // vehicles will return all vehicles
     vehicles: async () => {
