@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+//const mongoose = require("mongoose");
 
 // Model for an appointment, requiring a date, time, and vehicle ID. Also includes a user ID that will be populated with the user's ID.
 const appointmentSchema = new Schema({
