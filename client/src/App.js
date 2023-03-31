@@ -8,7 +8,12 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
+// import About from "./components/about/About";
+import Main from "./components/Main";
+// import Contact from "./components/contactForm/Contact";
+// import Appt from "./components/appointmentForm/Appt";
+
+// import Header from './components/Header';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -34,33 +39,12 @@ const httpLink = createHttpLink({
     cache: new InMemoryCache(),
   });
 
-// this is just a sample App for now, I am just adding this to do some testing. 
-// feel free to overwrite this if need be!
-  function App() {
-    return (
-      <ApolloProvider client={client}>
-        <Router>
-          <div className="flex-column justify-flex-start min-100-vh"> 
-            <Header />
-            </div>
-        </Router>
-      </ApolloProvider>
-    );
-  }
-  
-  export default App;
 
-  // export const QUERY_USER = gql`
-//     query user($username: String!) {
-//         user(username: $username){
-//             _id
-//             username
-//             email
-//             vehicles {
-//                 _id
-//                 make
-//                 model
-//                 year
-//             }
-//         }
-//     }`;
+function App() {
+  return (
+    <div className="App">
+      <Main />
+    </div>
+  );
+}
+export default App;
