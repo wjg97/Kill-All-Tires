@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 
 // Model for a user, requiring a username, email, and password. Also includes a vehicles array that will be populated with vehicle IDs.
 const userSchema = new Schema({
+// TODO: Add official name to schema
     username: {
       type: String,
       required: true,
