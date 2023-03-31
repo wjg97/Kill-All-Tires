@@ -14,11 +14,22 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(46, 46, 46);
-  color: rgb(255, 255, 255);
-  font-size: 25px;
+  color: rgb(209, 209, 209);
+  font-size: 30px;
   letter-spacing: 3px;
+  padding: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.5px black;
 }
 
 .employees {
-  margin-top: 30px;
+  margin-top: 50px;
+  letter-spacing: 3px;
+  color: rgb(209, 209, 209);
+  background-color: rgb(46, 46, 46);
+  font-size: 30px;
+  padding: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }

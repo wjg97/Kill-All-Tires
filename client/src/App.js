@@ -1,12 +1,12 @@
 import React from "react";
-import About from "./components/about/About";
+import About from "./pages/about/About";
 import Main from "./components/Main";
-import Contact from "./components/contactForm/Contact";
-import Appt from "./components/appointmentForm/Appt";
+import Contact from "./pages/contactForm/Contact";
+import Appt from "./pages/appointmentForm/Appt";
 function App() {
   return (
     <div className="App">
-      <Main />
+      <About />
     </div>
   );
 }
