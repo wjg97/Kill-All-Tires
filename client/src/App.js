@@ -6,7 +6,7 @@ import Appt from "./components/appointmentForm/Appt";
 function App() {
   return (
     <div className="App">
-      <Appt />
+      <Main />
     </div>
   );
 }
