@@ -33,3 +33,13 @@
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+.contactButton {
+  font-size: 30px;
+}
+
+.contactButton:hover {
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}

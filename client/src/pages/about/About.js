@@ -25,6 +25,8 @@ const aboutUs = () => {
           on the market today. Give us a call and talk to one of our highly
           trained service advisors for any and all questions!
         </h3>
+
+        <button className="contactButton"> Contact Us! </button>
       </div>
     </div>
   );
