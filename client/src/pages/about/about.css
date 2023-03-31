@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(46, 46, 46);
+}
+
 .aboutWelcome {
   margin: 0 auto;
   justify-content: center;

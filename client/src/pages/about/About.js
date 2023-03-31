@@ -1,7 +1,15 @@
 import React from "react";
 import "./about.css";
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const aboutUs = () => {
+const AboutUs = () => {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("./contactForm/Contact.js");
+  };
+
   return (
     <div className="aboutusContainer">
       <div className="aboutWelcome">
@@ -26,10 +34,10 @@ const aboutUs = () => {
           trained service advisors for any and all questions!
         </h3>
 
-        <button className="contactButton"> Contact Us! </button>
+        <Link to="/contact"> Contact Us! </Link>
       </div>
     </div>
   );
 };
 
-export default aboutUs;
+export default AboutUs;
