@@ -49,3 +49,18 @@ const httpLink = createHttpLink({
   }
   
   export default App;
+
+  // export const QUERY_USER = gql`
+//     query user($username: String!) {
+//         user(username: $username){
+//             _id
+//             username
+//             email
+//             vehicles {
+//                 _id
+//                 make
+//                 model
+//                 year
+//             }
+//         }
+//     }`;

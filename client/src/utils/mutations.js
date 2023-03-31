@@ -25,28 +25,46 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_VEHICLE = gql`
-  mutation addVehicle($make: String!, $model: Sting!, $year: Int!, $username: String!) {
-    addVehicle(make: $make, model: $model, year: $year, username: $username) {
+  mutation addVehicle($make: String!, $model: String!, $year: Int!, $user: String!) {
+    addVehicle(make: $make, model: $model, year: $year, user: $user) {
         vehicle {
             _id
             make
             model
             year
-            username
+            user
         }
     }
   }
-`
-export const ADD_APPOINTMENT = gql `
-  mutation addAppointment ($date: Int!, $time: Int!, $user: String!, $vehicle: String!) {
-    addAppointment (date: $date, time: $time, user: $user, vehicle: $vehicle) {
+`;
+
+export const REMOVE_VEHICLE = gql`
+  mutation removeVehicle($_id: ID!) {
+    removeVehicle(_id: $_id) {
+        _id
+    }
+  }
+`;
+
+export const ADD_APPOINTMENT = gql`
+  mutation addAppointment($date: String!, $time: String!, $vehicle: String!, $user: String!) {
+    addAppointment(date: $date, time: $time, vehicle: $vehicle, user: $user) {
         appointment {
             _id
             date
             time
-            user
             vehicle
+            user
         }
     }
   }
-`
+`;
+
+export const REMOVE_APPOINTMENT = gql`
+  mutation removeAppointment($_id: ID!) {
+    removeAppointment(_id: $_id) {
+        _id
+    }
+  }
+`;
+
