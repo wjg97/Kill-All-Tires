@@ -1,0 +1,42 @@
+[
+    {
+        "make": "Honda",
+        "model": "Civic Type R",
+        "year": 1997
+    },
+    {
+        "make": "Toyota",
+        "model": "Tacoma",
+        "year": 2012
+    },
+    {
+        "make": "Rolls Royce",
+        "model": "Phantom VII",
+        "year": 2017
+    },
+    {
+        "make": "Porsche",
+        "model": "911 GT3 RS",
+        "year": 2023
+    },
+    {
+        "make": "Mclaren",
+        "model": "720s",
+        "year": 2022
+    },
+    {
+        "make": "Ferrari",
+        "model": "F40",
+        "year": 1990
+    },
+    {
+        "make": "Ferrari",
+        "model": "F50",
+        "year": 1997
+    },
+    {
+        "make": "Porsche",
+        "model": "Carrera GT",
+        "year": 2005
+    }
+]
