@@ -1,7 +1,9 @@
 const { Schema, model } = require('mongoose');
+// const { Vehicle, vehicleSchema } = require('./Vehicle');
 //const mongoose = require("mongoose");
 
 // Model for an appointment, requiring a date, time, and vehicle ID. Also includes a user ID that will be populated with the user's ID.
+// TODO: Add field for service type, will define once sorted out with front end.
 const appointmentSchema = new Schema({
     date: {
         type: Date,
@@ -11,13 +13,16 @@ const appointmentSchema = new Schema({
         type: String,
         required: true,
     },
+    // vehicle: vehicleSchema,
     vehicle: {
         type: Schema.Types.ObjectId,
         ref: 'Vehicle',
+        required: true,
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+        required: true,
     },
 });
 
