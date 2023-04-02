@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import About from "./components/about/About";
 import Main from "./components/Main";
+import Index from "./components/Index";
+
 // import Contact from "./components/contactForm/Contact";
 // import Appt from "./components/appointmentForm/Appt";
 
@@ -43,7 +45,7 @@ const httpLink = createHttpLink({
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Index />
     </div>
   );
 }
