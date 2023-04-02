@@ -31,11 +31,17 @@ const resolvers = {
     },
     // vehicles will return all vehicles
     vehicles: async () => {
-      return Vehicle.find().populate("user");
+      return Vehicle.find().populate({
+        path: "user",
+        model: "User"
+      });
     },
     // vehicle will return a single vehicle
     vehicle: async (parent, { vehicleId }) => {
-      return Vehicle.findOne({ vehicleId }).populate("user");
+      return Vehicle.findOne({ vehicleId }).populate({
+        path: "user",
+        model: "User"
+      });
     },
     // appointments will return all appointments
     appointments: async () => {
