@@ -7,27 +7,55 @@ const resolvers = {
     // **NOTE** Queries going deeper than 2 layers will require additional queries to get all data. Currently, queries such as User > Appointment > vehicle will return Null vehicle data. But a query for User, and Vehicle, and Appointment will return all data. So on so forth. All data has been tested and is working.
     // users will return all users and their vehicles
     users: async () => {
-      return User.find().populate("vehicles");
+      return User.find()
+        .populate("vehicles")
+        .populate({
+          path: "appointments",
+          populate: {
+            path: "vehicle",
+            model: "Vehicle",
+          },
+        });
     },
     // user will return a single user and their vehicles
     user: async (parent, { userId }) => {
-      return await User.findOne({ userId }).populate("vehicles").populate("appointments");
+      return await User.findOne({ userId })
+        .populate("vehicles")
+        .populate({
+          path: "appointments",
+          populate: {
+            path: "vehicle",
+            model: "Vehicle",
+          },
+        });
     },
     // vehicles will return all vehicles
     vehicles: async () => {
-      return Vehicle.find().populate("user"); 
+      return Vehicle.find().populate({
+        path: "user",
+        model: "User"
+      });
     },
     // vehicle will return a single vehicle
     vehicle: async (parent, { vehicleId }) => {
-      return Vehicle.findOne({ vehicleId }).populate("user");
+      return Vehicle.findOne({ vehicleId }).populate({
+        path: "user",
+        model: "User"
+      });
     },
     // appointments will return all appointments
     appointments: async () => {
-      return Appointment.find().populate("user").populate("vehicle");
+      return Appointment.find().populate("user").populate({
+        path: "vehicle",
+        model: "Vehicle",
+      });
     },
     // appointment will return a single appointment
     appointment: async (parent, { appointmentId }) => {
-      return Appointment.findOne({ appointmentId }).populate("user").populate("vehicle");
+      return Appointment.findOne({ appointmentId }).populate("user").populate({
+        path: "vehicle",
+        model: "Vehicle",
+      });
     },
     // me will return a single user and their vehicles
     me: async (parent, args, context) => {
@@ -39,7 +67,7 @@ const resolvers = {
   },
 
   Mutation: {
-    // include user token in headers to test 
+    // include user token in headers to test
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
@@ -64,7 +92,12 @@ const resolvers = {
     },
     addVehicle: async (parent, { make, model, year, userId }, context) => {
       if (context.user) {
-        const vehicle = await Vehicle.create({ make, model, year, user: userId });
+        const vehicle = await Vehicle.create({
+          make,
+          model,
+          year,
+          user: userId,
+        });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
@@ -84,7 +117,7 @@ const resolvers = {
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { vehicles: vehicle._id } }
+          { $pull: { vehicles: vehicleId } }
         );
 
         return vehicle;
@@ -92,8 +125,13 @@ const resolvers = {
     },
     // **exhibits error ""message": "Cannot read properties of undefined (reading '_id')""**
     // Issue corrected by changing `vehicleId / userId: context.vehicle._id / user._id,` to `vehicleId, userId`
-    addAppointment: async (parent, { date, time, userId, vehicleId }, context) => {
+    addAppointment: async (
+      parent,
+      { date, time, userId, vehicleId },
+      context
+    ) => {
       if (context.user) {
+        // const vehicle = await Vehicle.findOne({vehicleId});
         const appointment = await Appointment.create({
           date,
           time,
@@ -104,9 +142,9 @@ const resolvers = {
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { appointments: appointment._id } }
-          );
+        );
 
-        return appointment.populate('user');
+        return appointment.populate("user");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -119,12 +157,12 @@ const resolvers = {
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { appointments: appointment._id } }
+          { $pull: { appointments: appointmentId } }
         );
 
         return appointment;
       }
-    }
+    },
   },
 };
 
