@@ -1,7 +1,7 @@
 const db = require('../config/connection');
 const { Appointment, User, Vehicle  } = require('../models');
 
-const appointmentData = require('./appoinmentData.json');
+const appointmentData = require('./appointmentData.json');
 const userData = require('./userData.json');
 const vehicleData = require('./vehicleData.json');
 
