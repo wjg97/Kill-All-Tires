@@ -1,14 +1,14 @@
 const jwt = require('jsonwebtoken');
 
-// secret and expiration are used to sign and verify the JWT
-const secret = 'spycar';
+const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
-// This function will be used to sign tokens for users, later
 module.exports = {
   authMiddleware: function ({ req }) {
+    // allows token to be sent via req.body, req.query, or headers
     let token = req.body.token || req.query.token || req.headers.authorization;
 
+    // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
@@ -26,8 +26,9 @@ module.exports = {
 
     return req;
   },
-  signToken: function ({ email, username, _id }) {
-    const payload = { email, username, _id };
+  signToken: function ({ firstName, email, _id }) {
+    const payload = { firstName, email, _id };
+
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };

@@ -26,6 +26,12 @@ const userSchema = new Schema({
         ref: 'Vehicle',
       },
     ],
+    appointments: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Appointment',
+      },
+    ],
   });
 
   // function to hash password before saving user to database
