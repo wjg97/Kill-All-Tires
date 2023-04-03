@@ -2,6 +2,7 @@ import React from "react";
 import driftGif from '../assets/drift.mp4';
 import logo from '../assets/logo.png';
 
+
 const Main = () => {
   return (
     <div className="main">

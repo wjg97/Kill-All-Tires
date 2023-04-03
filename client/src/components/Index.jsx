@@ -6,7 +6,10 @@ import logo from '../assets/logo.png'
 // import driftGif from '../assets/drift.mp4';
 import wallpaper from '../assets/wallpaper.jpg';
 import wallpaper2 from '../assets/wallpaper2.jpg';
+import login from "../pages/loginForm/index";
+import signup from "../pages/signupForm/index";
 
+module.exports = {login, signup};
 const Index = () => {
     return (
       <div>
