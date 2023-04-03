@@ -13,7 +13,6 @@ const Main = () => {
         
         <p className="animate2">EST. 2023</p>
       </div>
-
     </div>
   );
 }
