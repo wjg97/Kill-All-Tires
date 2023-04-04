@@ -4,6 +4,24 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+.calendarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.calendar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   width: 100%;
   height: 100vh;
@@ -16,7 +34,7 @@ video {
 }
 
 .content {
-  position: absolute;
+  
   width: 100%;
   height: 100%;
   top: 0;

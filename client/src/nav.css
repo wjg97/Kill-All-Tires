@@ -50,9 +50,10 @@ display: none;
 
 div.menu-pane {
   background: linear-gradient(to right, #000000 0%, #363636 100%);
-  position: fixed;
+  position: absolute;
   transform: translateX(-105vw);
   transform-origin: (0, 0);
+  margin-left: 60px;
   width: 30%;
   height: 100%;
   transition: 0.6s ease-in-out;

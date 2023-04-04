@@ -1,8 +1,7 @@
 import React from "react";
 import topDown from '../assets/ferrari.png';
-// import logo from '../assets/logo.png';
 import shadow from '../assets/shadow.png';
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 // import driftGif from '../assets/drift.mp4';
 import wallpaper from '../assets/wallpaper.jpg';
 import wallpaper2 from '../assets/wallpaper2.jpg';
