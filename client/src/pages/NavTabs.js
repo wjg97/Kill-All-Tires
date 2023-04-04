@@ -44,7 +44,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                 <li><a href="#appt"
                 onClick={() => handlePageChange('Appt')}
                 className={currentPage === 'Appt' ? 'nav-link active' : 'nav-link'}
-                >SERVICES</a></li>
+                >MAKE AN APPOINTMENT</a></li>
                 <li><a href="###">
                   MY GARAGE           
                   </a></li>
