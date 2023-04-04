@@ -1,5 +1,6 @@
 import React from "react";
-
+import logo from "../../assets/images/logo.svg";
+import driftGif from "../../assets/drift.png";
 const login = () => {
   console.log("You are logging into an account");
 
