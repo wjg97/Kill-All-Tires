@@ -23,6 +23,7 @@ const typeDefs = gql`
     _id: ID
     date: String
     time: String
+    service: String
     user: User
     vehicle: Vehicle
   }
@@ -46,7 +47,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addVehicle(make: String!, model: String!, year: Int!, userId: ID!): Vehicle
     removeVehicle(vehicleId: ID!): Vehicle
-    addAppointment(date: String!, time: String!, vehicleId: ID!, userId: ID!): Appointment
+    addAppointment(date: String!, time: String!, service: String!, vehicleId: ID!, userId: ID!): Appointment
     removeAppointment(appointmentId: ID!): Appointment
   }
 `;
