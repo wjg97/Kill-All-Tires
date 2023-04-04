@@ -27,16 +27,16 @@ const Garage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     
-    try {
-      const { data } = await addVehicle({
-        variables: { vehicle },
-      });
+    // try {
+    //   const { data } = await addVehicle({
+    //     //variables: { vehicle },
+    //   });
 
-      Auth.login(data.addUser.token);
-    } catch (e) {
-      console.error(e);
-      setErrorMessage(e.message);
-    }
+    //   Auth.garage(data.addVehicle.token);
+    // } catch (e) {
+    //   console.error(e);
+    //   setErrorMessage(e.message);
+    // }
 
     setVehicle("");
   };
@@ -52,14 +52,16 @@ const Garage = () => {
       <div className="signupContainer">
 
         <p>Enter a vehicle</p>
-        <input name="email" 
-        value={vehicle}
+        <form onSubmit={handleFormSubmit}>
+        <input name="vehicle" 
+        // value={vehicle}
         onChange={handleInputChange}
         type="vehicle"
         placeholder="Enter a Vehicle" 
         required />
 
         <button type="submit"> Submit </button>
+        </form>
       </div>
     </div>
   );
