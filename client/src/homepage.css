@@ -1,0 +1,401 @@
+
+* {
+  margin: 0;
+  padding: 0 0 0 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.logo{
+height: 60px;
+}
+
+.ferrari {
+  position: absolute;
+  display: flex;
+  height: 300px;
+  left: 40%;
+  top: 300px;
+  rotate: 160deg;
+  z-index: 1;
+  justify-content: center;
+}
+
+.shadow{
+  position: absolute;
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  top: 100px;
+  left: 37%;
+  rotate: 250deg;
+  z-index: 0;
+  opacity: 0.5;
+
+}
+
+
+.slogan{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  top: 250px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 200px;
+  letter-spacing: 3px;
+  padding: 0 0 0 0;
+  z-index: 2;
+  opacity: .15;
+}
+
+
+.slogan2{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 14, 14);
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 200px;
+  letter-spacing: 3px;
+  padding: 0 0 0 0;
+  left: 5px;
+  z-index: 3;
+  text-transform: uppercase;
+	background: linear-gradient(to right, #000000 0%, #898a8a 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.slogan:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.slogan2:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background: linear-gradient(to right, #ff0303 0%, #f8a771 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.information{
+  top: 1000px;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(to bottom, #000000 0%, #5e5d5d 100%);
+}
+
+.title{
+  position: absolute;
+  left: 42.7%;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+h2{
+  position: relative;
+  left: 10%;
+  color: white;
+}
+
+.about{
+  font-size: 70px;
+  font-style: italic;
+  font-weight: bolder;
+  color: white;
+  width: 50%;
+  z-index: 4;
+  letter-spacing: 3px;
+  top: 20px;
+}
+
+hr{
+  position: relative;
+  top: 30px;
+  width: 30%;
+  border: 3px solid rgb(255, 255, 255);
+  z-index: 4;
+}
+.services{
+  position: relative;
+  left: 11%;
+  top: 60px;
+  font-size: 70px;
+  width: 50%;
+  z-index: 4;
+  letter-spacing: 3px;
+}
+
+.bio {
+  position: relative;
+  left: 55%;
+  top: -145px;
+  height: 400px;
+  width: 900px;
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.wallpaper2{
+  position: relative;
+  width: 40%;
+  z-index: 3;
+  background-color: #000000;
+  opacity: 1;
+  left: 60%;
+  top: -230px;
+  border: black solid 2px;
+}
+
+.wallpaper {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  z-index: 0;
+  background-color: #000000;
+  opacity: 0.9;
+  top: -760px;
+  z-index: 2;
+  border: black solid 2px;
+}
+
+.overlay{
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 50%;
+}
+
+.loginContainer {
+  top: 200px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 4;
+}
+
+.commitment{
+  position: relative;
+  left: 82%;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1375px;
+  height: 400px;
+  width: 400px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+}
+
+.commitment2{
+  position: relative;
+  left: 82%;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1605px;
+  height: 400px;
+  width: 400px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+}
+
+.flags{
+  position: relative;
+  left: 84%;
+  top: -1965px;
+  height: 300px;
+  width: 300px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+  border-radius: 200px;
+  border: white solid 2px;
+  background-color: white;
+  opacity: 0.2;
+
+}
+
+.rims {
+  position: relative;
+  left: 3px;
+  top: -3100px;
+  height: 400px;
+  width: 400px;
+  font-style: italic;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.car-brands{
+top: 2700px;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(to right, #ffffff 0%, #e6e6e6 100%);
+  width: 100%;
+  height: 140%;
+}
+
+.brands {
+text-align: center;
+position: relative;
+top: 20px;
+letter-spacing: 2px;
+font-size: 120px;
+font-style: italic;
+
+
+}
+
+.car-brands-parent{
+  width: 100%;
+  position: relative;
+}
+
+.car-brands-child{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  margin-left: 150px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-brands-child2{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.car-brands-child3{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-brands-child4{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mechanic {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.service{
+  z-index: 2;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  top: -450px;
+  left: -30px;
+  font-size: 60px;
+  font-style: italic;
+}
+
+.service3{
+  z-index: 3;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  top: -600px;
+  left: 35%;
+  font-size: 60px;
+  font-style: italic;
+}
+
+
+.service2{
+  z-index: 3;
+  position: absolute;
+  color: white;
+  top: 200px;
+  width: 70%;
+  font-size: 60px;
+  font-style: italic;
+}
