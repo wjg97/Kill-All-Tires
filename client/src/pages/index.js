@@ -4,7 +4,7 @@ import Navbar from "./navbar/Navbar";
 import NavTabs from "../pages/NavTabs";
 import Contact from '../pages/contactForm/Contact';
 import Login from '../pages/loginForm/login';
-import SignUp from '../pages/signupForm/index';
+import SignUp from '../pages/signupForm/signup';
 import Appt from "./appointmentForm/Appt";
 
 export default function PortfolioContainer() {
@@ -21,7 +21,7 @@ export default function PortfolioContainer() {
     if (currentPage === 'Login') {
       return <Login />;
     }
-    if (currentPage === 'SignUp') {
+    if (currentPage === 'Signup') {
       return <SignUp />;
     }
     if (currentPage === 'Appt') {

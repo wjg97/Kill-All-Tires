@@ -1,12 +1,11 @@
 import React from "react";
 import logo from '../../assets/logo.svg'
 import './signup.css';
-const Signup = () => {
+const SignUp = () => {
   console.log("You are signing up for an account");
 
   return (
     <div className="main">
-      <div className="overlay"></div>
       <div className="content">
         <img className="rotate" src={logo} alt="KAT logo" />
         <h1 className="animate">KILL ALL TIRES</h1>
@@ -34,4 +33,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;

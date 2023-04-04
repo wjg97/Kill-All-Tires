@@ -33,12 +33,12 @@ function NavTabs({ currentPage, handlePageChange }) {
               </ul>
             
                <ul class="menu-links">
-                           <li><a href="#home"
-                           onClick={() => handlePageChange('Home')}
-                           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-                           >KILL ALL TIRES</a>
-                             <span id="DC-info">
-                  <p>EST 2023</p>
+                <li><a href="#home"
+                onClick={() => handlePageChange('Home')}
+                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+                 >KILL ALL TIRES</a>
+                <span id="DC-info">
+                <p>EST 2023</p>
                 </span></li>
       
                 <li><a href="#appt"
