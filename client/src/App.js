@@ -1,6 +1,6 @@
 import React from "react";
-import Main from "./components/Main";
-import Index from "./components/Index";
+import Main from "./pages/Main";
+import Index from "./pages/Index";
 
 function App() {
   return (
