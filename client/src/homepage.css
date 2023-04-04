@@ -97,7 +97,7 @@ height: 60px;
   top: 1000px;
   position: absolute;
   z-index: 0;
-  background: linear-gradient(to right, #000000 0%, #5e5d5d 100%);
+  background: linear-gradient(to bottom, #000000 0%, #5e5d5d 100%);
 }
 
 .title{
@@ -128,12 +128,15 @@ h2{
   color: white;
   width: 50%;
   z-index: 4;
+  letter-spacing: 3px;
+  top: 20px;
 }
 
 hr{
   position: relative;
+  top: 30px;
   width: 30%;
-  border: 1px solid rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
   z-index: 4;
 }
 .services{
@@ -149,7 +152,7 @@ hr{
 .bio {
   position: relative;
   left: 55%;
-  top: -135px;
+  top: -145px;
   height: 400px;
   width: 900px;
   font-size: 25px;
@@ -157,28 +160,30 @@ hr{
   color: white;
   z-index: 4;
   margin-right: 0px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .wallpaper2{
   position: relative;
   width: 40%;
-  z-index: 2;
+  z-index: 3;
   background-color: #000000;
   opacity: 1;
   left: 60%;
-  top: -290px;
+  top: -230px;
   border: black solid 2px;
 }
 
 .wallpaper {
   position: relative;
   width: 80%;
-  height: 10%;
+  height: 100%;
   z-index: 0;
   background-color: #000000;
-  opacity: 0.7;
-  top: -840px;
-  z-index: 1;
+  opacity: 0.9;
+  top: -760px;
+  z-index: 2;
   border: black solid 2px;
 }
 
@@ -188,5 +193,194 @@ hr{
   z-index: 4;
   background-color: rgba(0,0,0,0.3);
   width: 100%;
+  height: 50%;
+}
+
+.commitment{
+  position: relative;
+  left: 82%;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1375px;
+  height: 400px;
+  width: 400px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+}
+
+.commitment2{
+  position: relative;
+  left: 82%;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1605px;
+  height: 400px;
+  width: 400px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+}
+
+.flags{
+  position: relative;
+  left: 84%;
+  top: -1965px;
+  height: 300px;
+  width: 300px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  z-index: 4;
+  margin-right: 0px;
+  border-radius: 200px;
+  border: white solid 2px;
+  background-color: white;
+  opacity: 0.2;
+
+}
+
+.rims {
+  position: relative;
+  left: 3px;
+  top: -3100px;
+  height: 400px;
+  width: 400px;
+  font-style: italic;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.car-brands{
+top: 2700px;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(to right, #ffffff 0%, #e6e6e6 100%);
+  width: 100%;
+  height: 140%;
+}
+
+.brands {
+text-align: center;
+position: relative;
+top: 20px;
+letter-spacing: 2px;
+font-size: 120px;
+font-style: italic;
+
+
+}
+
+.car-brands-parent{
+  width: 100%;
+  position: relative;
+}
+
+.car-brands-child{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  margin-left: 150px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-brands-child2{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.car-brands-child3{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-brands-child4{
+  border: 2px solid #000;
+  width: 400px;
+  height: 1500px;
+  float: left;
+  position: relative;
+  margin: 100px;
+
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mechanic {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.service{
+  z-index: 2;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  top: -450px;
+  left: -30px;
+  font-size: 60px;
+  font-style: italic;
+}
+
+.service3{
+  z-index: 3;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  top: -600px;
+  left: 35%;
+  font-size: 60px;
+  font-style: italic;
+}
+
+
+.service2{
+  z-index: 3;
+  position: absolute;
+  color: white;
+  top: 200px;
+  width: 70%;
+  font-size: 60px;
+  font-style: italic;
 }

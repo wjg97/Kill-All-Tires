@@ -24,7 +24,7 @@ export const QUERY_VEHICLE = gql`
 `;
 
 export const QUERY_SINGLE_APPOINTMENT = gql`
-  query getSingleAppoinment($appointmentId: ID!) {
+  query getSingleAppointment($appointmentId: ID!) {
     appointment(appointmentId: $appointmentId) {
       _id
       date
