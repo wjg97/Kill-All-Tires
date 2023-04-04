@@ -8,7 +8,10 @@ const resolvers = {
     // users will return all users and their vehicles
     users: async () => {
       return User.find()
-        .populate("vehicles")
+        .populate({
+          path: "vehicles",
+          model: "Vehicle",
+        })
         .populate({
           path: "appointments",
           populate: {
@@ -20,7 +23,10 @@ const resolvers = {
     // user will return a single user and their vehicles
     user: async (parent, { userId }) => {
       return await User.findOne({ userId })
-        .populate("vehicles")
+        .populate({
+          path: "vehicles",
+          model: "Vehicle",
+        })
         .populate({
           path: "appointments",
           populate: {
@@ -45,14 +51,20 @@ const resolvers = {
     },
     // appointments will return all appointments
     appointments: async () => {
-      return Appointment.find().populate("user").populate({
+      return Appointment.find().populate({
+        path: "user",
+        model: "User"
+      }).populate({
         path: "vehicle",
         model: "Vehicle",
       });
     },
     // appointment will return a single appointment
     appointment: async (parent, { appointmentId }) => {
-      return Appointment.findOne({ appointmentId }).populate("user").populate({
+      return Appointment.findOne({ appointmentId }).populate({
+        path: "user",
+        model: "User"
+      }).populate({
         path: "vehicle",
         model: "Vehicle",
       });
@@ -60,7 +72,16 @@ const resolvers = {
     // me will return a single user and their vehicles
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("vehicles");
+        return User.findOne({ _id: context.user._id }).populate({
+          path: "vehicles",
+          model: "Vehicle",
+        }).populate({
+          path: "appointments",
+          populate: {
+            path: "vehicle",
+            model: "Vehicle",
+          },
+        });
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -127,7 +148,7 @@ const resolvers = {
     // Issue corrected by changing `vehicleId / userId: context.vehicle._id / user._id,` to `vehicleId, userId`
     addAppointment: async (
       parent,
-      { date, time, userId, vehicleId },
+      { date, time, service, userId, vehicleId },
       context
     ) => {
       if (context.user) {
@@ -135,6 +156,7 @@ const resolvers = {
         const appointment = await Appointment.create({
           date,
           time,
+          service,
           vehicle: vehicleId,
           user: userId,
         });
