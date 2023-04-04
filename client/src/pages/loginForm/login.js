@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../../assets/images/logo.svg";
-import driftGif from "../../assets/drift.png";
+import logo from "../../assets/logo.svg";
+// import driftGif from "../../assets/drift.png";
 const login = () => {
   console.log("You are logging into an account");
 
   return (
     <div className="main">
       <div className="overlay"></div>
-      <video src={driftGif} autoPlay loop muted />
+      {/* <video src={driftGif} autoPlay loop muted /> */}
       <div className="content">
-        <img className="rotate" src={logo} alt="KAT logo" />
+        {/* <img className="rotate" src={logo} alt="KAT logo" /> */}
         <h1 className="animate">KILL ALL TIRES</h1>
         <p className="animate2">EST. 2023.</p>
       </div>

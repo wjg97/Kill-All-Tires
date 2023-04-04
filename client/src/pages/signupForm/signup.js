@@ -1,4 +1,6 @@
 import React from "react";
+import driftGif from '../../assets/drift.png'
+import logo from '../../assets/logo.svg'
 
 const signup = () => {
   console.log("You are signing up for an account");
