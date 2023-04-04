@@ -1,15 +1,11 @@
 import React, { useState} from "react";
 import { ADD_USER } from "../../utils/mutations"; // import the mutation
-import { ApolloProvider, InMemoryCache, ApolloClient, useMutation } from "@apollo/client"; // import the useMutation hook
+import { ApolloProvider, useMutation } from "@apollo/client"; // import the useMutation hook
 import Auth from "../../utils/auth"; // import the Auth utility
 
 import logo from '../../assets/logo.svg'
 import './signup.css';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
 
 const SignUp = () => {
   console.log("You are signing up for an account");
@@ -57,7 +53,6 @@ const SignUp = () => {
 
 
   return (
-    <ApolloProvider client={client}>
     <div className="main">
       <div className="content">
         <img className="rotate" src={logo} alt="KAT logo" />
@@ -96,7 +91,6 @@ const SignUp = () => {
         <button> Submit </button>
       </div>
     </div>
-    </ApolloProvider>
   );
 };
 
