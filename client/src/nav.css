@@ -1,4 +1,4 @@
-.menu-pane{
+.menu-pane {
   z-index: 5;
 }
 .hamburger-icon {
@@ -27,7 +27,7 @@
 }
 
 #openmenu:checked ~ .body-text {
-display: none;
+  display: none;
 }
 
 #openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
@@ -70,14 +70,16 @@ div.menu-pane {
   padding: 10%;
 }
 
-.menu-links li, a, span {
-      transition: 0.5s ease-in-out;
-      list-style: none;
+.menu-links li,
+a,
+span {
+  transition: 0.5s ease-in-out;
+  list-style: none;
 }
 
 .menu-pane ul {
   padding: 10%;
-  
+
   display: inline-block;
 }
 
@@ -85,22 +87,18 @@ div.menu-pane {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: 40px;
-    font-size: 30px;
-
+  font-size: 30px;
 }
-
 
 .menu-pane li:first-child {
   font-size: 40px;
   margin-left: 30px;
 }
 
-
 .menu-links li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-
 
 .menu-links li:hover a {
   color: #ffffff;
@@ -108,36 +106,32 @@ div.menu-pane {
 }
 
 .menu-links li:first-child:hover a {
-  color: rgb(0, 0, 0);  
+  color: rgb(0, 0, 0);
   background-color: #ffffff;
   width: 400px;
 }
 
-
 .menu-links li:first-child:hover #QC-info {
-opacity: 1;
+  opacity: 1;
 }
 
 .menu-links li:first-child:hover #DC-info {
-opacity: 1;
+  opacity: 1;
 }
 
 #DC-info {
   background-color: #ffffff;
-    border: 2px solid;
+  border: 2px solid;
   border-color: #ffffff;
-display: block;
+  display: block;
   opacity: 0;
   width: 255px;
   text-align: center;
 }
 
-
 .menu-links li:first-child a {
   padding: 5px;
 }
-
-
 
 input.hamburger-checkbox {
   position: absolute;
@@ -148,4 +142,3 @@ input.hamburger-checkbox {
   opacity: 0;
   height: 6vh;
 }
-

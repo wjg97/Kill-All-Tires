@@ -21,9 +21,11 @@ function Contact() {
           console.log(result.text);
           console.log("Message Sent!");
           e.target.reset();
+          window.alert("Message sent! Thanks!");
         },
         (error) => {
           console.log(error.text);
+          window.alert("There was an error, please try again");
         }
       );
   };

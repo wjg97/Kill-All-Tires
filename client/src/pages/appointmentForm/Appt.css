@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(to bottom, #616161, #222222);
+}
+
+.appointmentForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.apptSubmit {
+  margin-top: 10px;
+  font-size: 35px;
+  background-color: black;
+  color: white;
+}
+
+.selectedDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 475px;
+  margin: 0 auto;
+}
+
+.react-calendar {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
