@@ -6,6 +6,7 @@ import Contact from '../pages/contactForm/Contact';
 import Login from '../pages/loginForm/login';
 import SignUp from '../pages/signupForm/signup';
 import Appt from "./appointmentForm/Appt";
+import Garage from "../pages/garage/garage";
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -26,6 +27,9 @@ export default function PortfolioContainer() {
     }
     if (currentPage === 'Appt') {
       return <Appt />;
+    }
+    if (currentPage === 'Garage') {
+      return <Garage />;
     }
   };
 
