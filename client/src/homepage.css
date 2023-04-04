@@ -189,7 +189,8 @@ hr{
 
 .overlay{
   top: 00px;
-  position: absolute;
+  display: flex;
+  justify-content: center;
   z-index: 4;
   background-color: rgba(0,0,0,0.3);
   width: 100%;

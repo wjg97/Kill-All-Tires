@@ -5,7 +5,7 @@ import { useMutation } from "@apollo/client"; // import the useMutation hook
 import Auth from "../../utils/auth"; // import the Auth utility
 
 
-const signup = () => {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -83,4 +83,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;

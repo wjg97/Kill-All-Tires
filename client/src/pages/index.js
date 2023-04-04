@@ -5,6 +5,7 @@ import NavTabs from "../pages/NavTabs";
 import Contact from '../pages/contactForm/Contact';
 import Login from '../pages/loginForm/login';
 import SignUp from '../pages/signupForm/index';
+import Appt from "./appointmentForm/Appt";
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -23,7 +24,9 @@ export default function PortfolioContainer() {
     if (currentPage === 'SignUp') {
       return <SignUp />;
     }
-
+    if (currentPage === 'Appt') {
+      return <Appt />;
+    }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);

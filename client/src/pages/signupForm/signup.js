@@ -1,14 +1,12 @@
 import React from "react";
-import driftGif from '../../assets/drift.png'
 import logo from '../../assets/logo.svg'
-
-const signup = () => {
+import './signup.css';
+const Signup = () => {
   console.log("You are signing up for an account");
 
   return (
     <div className="main">
       <div className="overlay"></div>
-      <video src={driftGif} autoPlay loop muted />
       <div className="content">
         <img className="rotate" src={logo} alt="KAT logo" />
         <h1 className="animate">KILL ALL TIRES</h1>
@@ -36,4 +34,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
