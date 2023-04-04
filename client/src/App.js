@@ -6,14 +6,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import About from "./components/about/About";
-import Main from "./components/Main";
-import Index from "./components/Header/index";
-import Login from "./pages/loginForm/login";
-import Signup from "./pages/signupForm/signup";
-import Navbar from "";
+// import Main from "./components/Main";
+import Main from "./pages/Main";
+import Index from "./pages/Index";
 
 // import Contact from "./components/contactForm/Contact";
 // import Appt from "./components/appointmentForm/Appt";
