@@ -68,14 +68,27 @@ const SignUp = () => {
         <h1>Signup for an account</h1>
 
         <p>Enter a username</p>
-        <input name="username" placeholder="username" required />
+        <input name="username" 
+        value={username}
+        onChange={handleInputChange}
+        type="text"
+        placeholder="Username" 
+        required />
 
         <p>Enter an email</p>
-        <input name="email" placeholder="email" required />
+        <input name="email" 
+        value={email}
+        onChange={handleInputChange}
+        type="email"
+        placeholder="Email" 
+        required />
         <p>Enter a password</p>
         <input
           name="password"
-          placeholder="password"
+          value={password}
+          onChange={handleInputChange}
+          type="password"
+          placeholder="Password"
           autoComplete="off"
           required
         />
