@@ -33,21 +33,23 @@ function NavTabs({ currentPage, handlePageChange }) {
               </ul>
             
                <ul class="menu-links">
-                           <li><a href="#home"
-                           onClick={() => handlePageChange('Home')}
-                           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-                           >KILL ALL TIRES</a>
-                             <span id="DC-info">
-                  <p>EST 2023</p>
+                <li><a href="#home"
+                onClick={() => handlePageChange('Home')}
+                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+                 >KILL ALL TIRES</a>
+                <span id="DC-info">
+                <p>EST 2023</p>
                 </span></li>
       
-                <li><a href="###">SERVICES</a></li>
+                <li><a href="#appt"
+                onClick={() => handlePageChange('Appt')}
+                className={currentPage === 'Appt' ? 'nav-link active' : 'nav-link'}
+                >MAKE AN APPOINTMENT</a></li>
                 <li><a href="###">
                   MY GARAGE           
                   </a></li>
                 <li><a href="#contact"
                 onClick={() => handlePageChange('Contact')}
-                // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
                 >CONTACT US</a></li>
                 <li><a href="#login"
@@ -64,8 +66,8 @@ function NavTabs({ currentPage, handlePageChange }) {
               
             </nav>
           </div>
-        <div class="body-text">
-        </div>
+        {/* <div class="body-text">
+        </div> */}
       </div>
     );
   }

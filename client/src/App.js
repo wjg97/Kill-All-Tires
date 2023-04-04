@@ -13,8 +13,12 @@ import Index from "./pages/Index";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
+const client = new ApolloClient({
+  uri: "/graphql",
+  cache: new InMemoryCache(),
+  link: httpLink,
+});
 
-// Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem("id_token");
@@ -27,28 +31,12 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const client = new ApolloClient({
-  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <>
-          <Navbar />
-          <Routes>
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route
-              path="*"
-              element={<h1 className="display-2">Wrong page!</h1>}
-            />
-          </Routes>
-        </>
-      </Router>
+      <div className="App">
+        <Index />
+      </div>
     </ApolloProvider>
   );
 }
