@@ -9,7 +9,9 @@ import './garage.css';
 
 const Garage = () => {
   console.log("You are adding a vehicle to your garage");
-  const [vehicle, setVehicle] = useState("");
+  const [make, setMake] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (event) => {
@@ -17,8 +19,14 @@ const Garage = () => {
     const inputType = target.name;
     const inputValue = target.value;
 
-    if (inputType === "Vehicle") {
-      setVehicle(inputValue);
+    if (inputType === "make") {
+      setMake(inputValue);
+    }
+    if (inputType === "model") {
+      setModel(inputValue);
+    }
+    if (inputType === "year") {
+      setYear(inputValue);
     }
   };
 
@@ -27,18 +35,20 @@ const Garage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     
-    // try {
-    //   const { data } = await addVehicle({
-    //     //variables: { vehicle },
-    //   });
+    try {
+      const { data } = await addVehicle({
+        variables: { make, model, year },
+      });
 
-    //   Auth.garage(data.addVehicle.token);
-    // } catch (e) {
-    //   console.error(e);
-    //   setErrorMessage(e.message);
-    // }
+      Auth.addVehicle(data.addVehicle.token);
+    } catch (e) {
+      console.error(e);
+      setErrorMessage(e.message);
+    }
 
-    setVehicle("");
+    setMake("");
+    setModel("");
+    setYear("");
   };
 
 
@@ -51,13 +61,29 @@ const Garage = () => {
       </div>
       <div className="signupContainer">
 
-        <p>Enter a vehicle</p>
+        <p>Enter vehicle make</p>
         <form onSubmit={handleFormSubmit}>
-        <input name="vehicle" 
-        // value={vehicle}
+        <input name="make" 
+        value={make}
         onChange={handleInputChange}
-        type="vehicle"
-        placeholder="Enter a Vehicle" 
+        type="text"
+        placeholder="Make" 
+        required />
+
+        <p>Enter vehicle model</p>
+        <input name="model"
+        value={model}
+        onChange={handleInputChange}
+        type="text"
+        placeholder="Model"
+        required />
+
+        <p>Enter vehicle year</p>
+        <input name="year"
+        value={year}
+        onChange={handleInputChange}
+        type="text"
+        placeholder="Year"
         required />
 
         <button type="submit"> Submit </button>
