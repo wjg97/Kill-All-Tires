@@ -1,5 +1,4 @@
-import React from "react"
-import login from "./loginForm"
-import signup from "./signupForm"
+import login from "../pages/loginForm"
+import signup from "../pages/signupForm"
 
 module.exports = {login, signup};
