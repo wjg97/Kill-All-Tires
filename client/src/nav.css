@@ -102,7 +102,7 @@ span {
 
 .menu-links li:hover a {
   color: #ffffff;
-  letter-spacing: 2px;
+  text-decoration: underline;
 }
 
 .menu-links li:first-child:hover a {
