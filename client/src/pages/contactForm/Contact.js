@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
-import bgPic from "../../assets/Customerservicepic.jpg";
+import customer from "../../assets/customers.mp4";
 
 function Contact() {
   const form = useRef();
@@ -35,11 +35,11 @@ function Contact() {
   return (
     <div className="formBox">
       <div className="background">
-        <img src={bgPic} alt="Customer Service Pic" />
+      <video src={customer} className="contactVideo" autoPlay loop muted />
       </div>
 
       <div class="secHeader">
-        <h2>Contact Us:</h2>
+        <h2 className="contact">Contact Us:</h2>
       </div>
 
       <form ref={form} onSubmit={sendEmail}>
