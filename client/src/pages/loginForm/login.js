@@ -6,13 +6,8 @@ const login = () => {
 
   return (
     <div className="main">
-      <div className="overlay"></div>
-      {/* <video src={driftGif} autoPlay loop muted /> */}
-      <div className="content">
-        {/* <img className="rotate" src={logo} alt="KAT logo" /> */}
-        <h1 className="animate">KILL ALL TIRES</h1>
-        <p className="animate2">EST. 2023.</p>
-      </div>
+      
+      
       <div className="loginContainer">
         <h1>Login to an account</h1>
 
