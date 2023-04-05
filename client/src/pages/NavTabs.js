@@ -45,17 +45,22 @@ function NavTabs({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('Appt')}
                 className={currentPage === 'Appt' ? 'nav-link active' : 'nav-link'}
                 >MAKE AN APPOINTMENT</a></li>
-                <li><a href="###">
-                  MY GARAGE           
-                  </a></li>
+
+                <li><a href="#garage"
+                onClick={() => handlePageChange('Garage')}
+                className={currentPage === 'Garage' ? 'nav-link active' : 'nav-link'}
+                >MY GARAGE</a></li>
+
                 <li><a href="#contact"
                 onClick={() => handlePageChange('Contact')}
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
                 >CONTACT US</a></li>
+
                 <li><a href="#login"
                 onClick={() => handlePageChange('Login')}
                 className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
                 >LOGIN</a></li>
+
                   <li><a href="#signup"
                   onClick={() => handlePageChange('Signup')}
                     className={currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}
