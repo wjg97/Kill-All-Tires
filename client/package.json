@@ -2,6 +2,7 @@
   "name": "practice-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@emailjs/browser": "^3.10.0",
@@ -9,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "graphql": "^16.6.0",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-calendar": "^4.1.0",
     "react-dom": "^18.2.0",
