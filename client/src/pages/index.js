@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import Home from './home/Home'
-//import Navbar from "./navbar/Navbar";
-import NavTabs from "../pages/NavTabs";
-import Contact from '../pages/contactForm/Contact';
-import Login from '../pages/loginForm/login';
-import SignUp from '../pages/signupForm/signup';
-import Appt from "./appointmentForm/Appt";
+import React from "react";
+import topDown from '../assets/ferrari.png';
+import shadow from '../assets/shadow.png';
+import logo from '../assets/logo.png'
+import wallpaper from '../assets/lamborghini.mp4';
+import wallpaper2 from '../assets/wallpaper2.jpg';
+import flags from '../assets/flags.png';
+import rims from '../assets/rims.png';
+import mechanic from '../assets/mechanic.mp4';
+import mechanic2 from '../assets/mechanic2.mp4';
+import mechanic3 from '../assets/mechanic3.mp4';
+import mechanic4 from '../assets/mechanic4.mp4';
 import Garage from "../pages/garage/garage";
 
 export default function PortfolioContainer() {

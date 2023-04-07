@@ -2,8 +2,8 @@ import React, { useState} from "react";
 import { ADD_USER } from "../../utils/mutations"; // import the mutation
 import { ApolloProvider, useMutation } from "@apollo/client"; // import the useMutation hook
 import Auth from "../../utils/auth"; // import the Auth utility
-// import carGif from '../../assets/cargif.mp4';
-// import logo from '../../assets/logo.png';
+import carGif from '../../assets/cargif.mp4';
+import logo from '../../assets/logo.png';
 import './signup.css';
 
 
@@ -41,7 +41,7 @@ const SignUp = () => {
 
   return (
     <div className="main">
-        {/* <video src={carGif} className="video" autoPlay loop muted/> */}
+        <video src={carGif} className="video" autoPlay loop muted/>
       <div className="content">
         {/* <img className="rotate" src={logo} alt="KAT logo" /> */}
         <h1 className="animate">KILL ALL TIRES</h1>
@@ -59,12 +59,14 @@ const SignUp = () => {
         required />
 
         <p className="inputter">Enter an email</p>
+        <p className="inputter">Enter an email</p>
         <input name="email" 
         value={formState.email}
         onChange={handleInputChange}
         type="email"
         placeholder="Email" 
         required />
+        <p className="inputter">Enter a password</p>
         <p className="inputter">Enter a password</p>
         <input
           name="password"

@@ -115,10 +115,10 @@ height: 60px;
   z-index: 1;
 }
 
-h2{
+h2 {
   position: relative;
-  left: 10%;
   color: white;
+  left: 10%;
 }
 
 .about{
@@ -152,7 +152,7 @@ hr{
 .bio {
   position: relative;
   left: 55%;
-  top: -145px;
+  top: -105px;
   height: 400px;
   width: 900px;
   font-size: 25px;
@@ -162,6 +162,7 @@ hr{
   margin-right: 0px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .wallpaper2{
@@ -171,7 +172,7 @@ hr{
   background-color: #000000;
   opacity: 1;
   left: 60%;
-  top: -230px;
+  top: -145px;
   border: black solid 2px;
 }
 
@@ -182,7 +183,7 @@ hr{
   z-index: 0;
   background-color: #000000;
   opacity: 0.9;
-  top: -760px;
+  top: -720px;
   z-index: 2;
   border: black solid 2px;
 }
@@ -216,7 +217,7 @@ hr{
   left: 82%;
   text-align: center;
   text-transform: uppercase;
-  top: -1375px;
+  top: -1255px;
   height: 400px;
   width: 400px;
   letter-spacing: 2px;
@@ -232,7 +233,7 @@ hr{
   left: 82%;
   text-align: center;
   text-transform: uppercase;
-  top: -1605px;
+  top: -1485px;
   height: 400px;
   width: 400px;
   letter-spacing: 2px;
@@ -246,7 +247,7 @@ hr{
 .flags{
   position: relative;
   left: 84%;
-  top: -1965px;
+  top: -1845px;
   height: 300px;
   width: 300px;
   letter-spacing: 2px;
