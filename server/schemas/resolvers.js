@@ -4,7 +4,6 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    // **NOTE** Queries going deeper than 2 layers will require additional queries to get all data. Currently, queries such as User > Appointment > vehicle will return Null vehicle data. But a query for User, and Vehicle, and Appointment will return all data. So on so forth. All data has been tested and is working.
     // users will return all users and their vehicles
     users: async () => {
       return User.find()

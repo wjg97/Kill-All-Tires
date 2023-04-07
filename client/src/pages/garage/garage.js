@@ -9,46 +9,32 @@ import './garage.css';
 
 const Garage = () => {
   console.log("You are adding a vehicle to your garage");
-  const [make, setMake] = useState("");
-  const [model, setModel] = useState("");
-  const [year, setYear] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [formState, setFormState] = useState({ make: "", model: "", year:"",user:"" });
+  const [addVehicle, { error, data }] = useMutation(ADD_VEHICLE);
 
   const handleInputChange = (event) => {
-    const { target } = event;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const { name, value } = event.target;
 
-    if (inputType === "make") {
-      setMake(inputValue);
-    }
-    if (inputType === "model") {
-      setModel(inputValue);
-    }
-    if (inputType === "year") {
-      setYear(inputValue);
-    }
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
-
-  const [addVehicle, { error }] = useMutation(ADD_VEHICLE); // use the useMutation hook to execute the ADD_USER mutation in the handleFormSubmit function
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log(formState);
     
     try {
       const { data } = await addVehicle({
-        variables: { make, model, year },
+        variables: { ...formState },
       });
 
-      Auth.addVehicle(data.addVehicle.token);
+      Auth.garage(data.addVehicle.token);
     } catch (e) {
       console.error(e);
-      setErrorMessage(e.message);
     }
 
-    setMake("");
-    setModel("");
-    setYear("");
   };
 
 
@@ -60,35 +46,45 @@ const Garage = () => {
         <p className="animate2">EST. 2023.</p>
       </div>
       <div className="signupContainer">
-
-        <p>Enter vehicle make</p>
+        <h1>Enter a vehicle to ypur Garage</h1>
         <form onSubmit={handleFormSubmit}>
+
+        <p className="inputter">Enter the make of the vehicle</p>
         <input name="make" 
-        value={make}
+        value={formState.make}
         onChange={handleInputChange}
-        type="text"
-        placeholder="Make" 
+        type="make"
+        placeholder="Enter a vehicle make" 
         required />
 
-        <p>Enter vehicle model</p>
-        <input name="model"
-        value={model}
+        <p className="inputter">Enter the model of the vehicle</p>
+        <input name="model" 
+        value={formState.model}
         onChange={handleInputChange}
-        type="text"
-        placeholder="Model"
+        type="model"
+        placeholder="Enter a vehicle model" 
         required />
 
-        <p>Enter vehicle year</p>
-        <input name="year"
-        value={year}
+
+        <p className="inputter">Enter the year of the vehicle</p>
+        <input name="year" 
+        value={formState.year}
         onChange={handleInputChange}
-        type="text"
-        placeholder="Year"
+        type="year"
+        placeholder="Enter a vehicle year" 
+        required />
+
+        <p className="inputter">Enter your Username</p>
+        <input name="user" 
+        value={formState.user}
+        onChange={handleInputChange}
+        type="user"
+        placeholder="Enter your Username" 
         required />
 
         <button type="submit"> Submit </button>
         </form>
-      </div>
+      </div>    
     </div>
   );
 };
