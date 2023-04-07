@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../nav.css'
 function NavTabs({ currentPage, handlePageChange }) {
     return (
         <div class="menu-container">
@@ -65,7 +65,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                   onClick={() => handlePageChange('Signup')}
                     className={currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}
                   >SIGN UP</a></li>
-              </ul>
+                  </ul>
               
               
               

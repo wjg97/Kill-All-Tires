@@ -46,7 +46,7 @@ const Garage = () => {
         <p className="animate2">EST. 2023.</p>
       </div>
       <div className="signupContainer">
-        <h1>Enter a vehicle to ypur Garage</h1>
+        <h1>Enter a vehicle to your Garage</h1>
         <form onSubmit={handleFormSubmit}>
 
         <p className="inputter">Enter the make of the vehicle</p>
