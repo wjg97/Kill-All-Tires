@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { ADD_USER } from "../../utils/mutations"; // import the mutation
-import { useMutation } from "@apollo/client"; // import the useMutation hook
+import { ApolloProvider, useMutation } from "@apollo/client"; // import the useMutation hook
 import Auth from "../../utils/auth"; // import the Auth utility
 // import carGif from '../../assets/cargif.mp4';
 // import logo from '../../assets/logo.png';
