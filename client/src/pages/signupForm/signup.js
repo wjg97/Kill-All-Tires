@@ -59,14 +59,12 @@ const SignUp = () => {
         required />
 
         <p className="inputter">Enter an email</p>
-        <p className="inputter">Enter an email</p>
         <input name="email" 
         value={formState.email}
         onChange={handleInputChange}
         type="email"
         placeholder="Email" 
         required />
-        <p className="inputter">Enter a password</p>
         <p className="inputter">Enter a password</p>
         <input
           name="password"

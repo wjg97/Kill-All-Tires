@@ -1,10 +1,8 @@
 import React from "react";
-//import {Link} from "react-router-dom";
 import '../../nav.css';
 import topDown from '../../assets/ferrari.png';
-// import logo from '../assets/logo.png';
 import shadow from '../../assets/shadow.png';
-// import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png';
 // import driftGif from '../assets/drift.mp4';
 import wallpaper from '../../assets/lamborghini.mp4';
 import wallpaper2 from '../../assets/wallpaper2.jpg';
