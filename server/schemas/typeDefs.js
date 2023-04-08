@@ -27,6 +27,15 @@ const typeDefs = gql`
     user: User
     vehicle: Vehicle
   }
+  type Appointmentv2 {
+    _id: ID
+    service: String
+    year: String
+    make: String
+    model: String
+    date: String
+    time: String
+  }
   type Auth {
     token: ID!
     user: User
@@ -39,6 +48,8 @@ const typeDefs = gql`
     vehicle(vehicleId: ID!): Vehicle
     appointments: [Appointment]
     appointment(appointmentId: ID!): Appointment
+    appointmentsv2: [Appointmentv2]
+    appointmentv2(appointmentv2Id: ID!): Appointmentv2
     me: User
   }
 #   Define the mutations that will be available to the client
@@ -49,6 +60,8 @@ const typeDefs = gql`
     removeVehicle(vehicleId: ID!): Vehicle
     addAppointment(date: String!, time: String!, service: String!, vehicleId: ID!, userId: ID!): Appointment
     removeAppointment(appointmentId: ID!): Appointment
+    addAppointmentv2(service: String!, year: String!, make: String!, model: String!, date: String!, time: String! userId: ID!): Appointmentv2
+    removeAppointmentv2(appointmentv2Id: ID!): Appointmentv2
   }
 `;
 module.exports = typeDefs;
