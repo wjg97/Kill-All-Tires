@@ -3,6 +3,7 @@ import { ADD_VEHICLE } from "../../utils/mutations"; // import the mutation
 import { ApolloProvider, useMutation } from "@apollo/client"; // import the useMutation hook
 import Auth from "../../utils/auth"; // import the Auth utility
 
+
 import logo from '../../assets/logo.svg'
 import './garage.css';
 
@@ -34,7 +35,6 @@ const Garage = () => {
     } catch (e) {
       console.error(e);
     }
-
   };
 
 
@@ -84,7 +84,7 @@ const Garage = () => {
 
         <button type="submit"> Submit </button>
         </form>
-      </div>    
+      </div>
     </div>
   );
 };
