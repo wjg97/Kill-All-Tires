@@ -43,7 +43,7 @@ const SignUp = () => {
     <div className="main">
         <video src={carGif} className="video" autoPlay loop muted/>
       <div className="content">
-        {/* <img className="rotate" src={logo} alt="KAT logo" /> */}
+         <img className="rotate" src={logo} alt="KAT logo" /> 
         <h1 className="animate">KILL ALL TIRES</h1>
         <p className="animate2">EST. 2023.</p>
       </div>
