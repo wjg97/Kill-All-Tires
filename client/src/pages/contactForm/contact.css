@@ -3,12 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contact{
+  position: relative;
+  left: 10%;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-style: italic;
 }
 
 .background {
@@ -20,10 +26,12 @@
   z-index: -1;
 }
 
-.background img {
-  object-fit: cover;
-  width: 100%;
+.contactVideo {
+  position: absolute;
+  left: -700px;
+  width: 80%;
   height: 100%;
+  z-index: 4  ;
 }
 
 .secHeader {
@@ -62,7 +70,7 @@ input[type="submit"] {
   color: rgb(255, 255, 255);
 }
 
-label {
+/* label {
   display: flex;
   color: black;
   background-color: rgb(139, 139, 139);
@@ -70,4 +78,4 @@ label {
   border-radius: 7px;
   padding: 5px;
   margin: 5px auto;
-}
+} */
