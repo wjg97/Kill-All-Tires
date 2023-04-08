@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 // import customer from "../../assets/customers.mp4";
 import "./contact.css";
+import customer from "../../assets/customers.mp4";
 
 function Contact() {
   const form = useRef();
@@ -31,7 +32,7 @@ function Contact() {
   return (
     <div className="formBox">
       <div className="background">
-      {/* <video src={customer} className="contactVideo" autoPlay loop muted /> */}
+      <video src={customer} className="contactVideo" autoPlay loop muted />
       </div>
       <div class="secHeader">
         <h2 className="contact">Contact Us:</h2>
