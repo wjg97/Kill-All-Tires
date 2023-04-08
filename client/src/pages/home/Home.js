@@ -10,7 +10,6 @@ import flags from '../../assets/flags.png';
 import rims from '../../assets/rims.png';
 import mechanic from '../../assets/mechanic.mp4';
 import mechanic2 from '../../assets/mechanic2.mp4';
-import mechanic3 from '../../assets/mechanic3.mp4';
 import mechanic4 from '../../assets/mechanic4.mp4';
 //import Contact from '../../pages/contactForm/Contact';
 
