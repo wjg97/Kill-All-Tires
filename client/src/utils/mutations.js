@@ -6,6 +6,8 @@ export const LOGIN_USER = gql`
       token
       user {
         _id
+        email
+        password
         username
       }
     }
@@ -28,7 +30,6 @@ export const ADD_VEHICLE = gql`
   mutation addVehicle($make: String!, $model: String!, $year: Int!, $user: String!) {
     addVehicle(make: $make, model: $model, year: $year, user: $user) {
         vehicle {
-            vehicle
             _id
             make
             model

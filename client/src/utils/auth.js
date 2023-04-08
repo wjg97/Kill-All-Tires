@@ -27,9 +27,10 @@ class AuthService {
     return localStorage.getItem('id_token');
   }
 
-  garage() {
-    return localStorage.setItem('id_token');
-  }
+  // garage(idToken) {
+  //   return localStorage.setItem('id_token', idToken);
+  //   window.location.assign();
+  // }
 
   login(idToken) {
     localStorage.setItem('id_token', idToken);

@@ -40,12 +40,10 @@ const Navbar = () => {
               </span></li>
     
               <li><a href="###">SERVICES</a></li>
-              <li><a href="###">
-                MY GARAGE           
-                </a></li>
+              <li><a href="###">MY GARAGE</a></li>
               <li><a href="###">CONTACT US</a></li>
               <li><a href="###">LOGIN</a></li>
-                <li><a href="###">SIGN UP</a></li>
+              <li><a href="###">SIGN UP</a></li>
             </ul>
             
             
