@@ -70,8 +70,8 @@ export const REMOVE_APPOINTMENT = gql`
 
 // temporary mutation to test the appointmentv2 type
 export const ADD_APPOINTMENTV2 = gql`
-  mutation addAppointmentv2($service: String, $year: String, $make: String, $model: String, $date: String, $time: String!, $user: String!) {
-    addAppointmentv2(service: $service, year: $year, make: $make, model: $model, date: $date, time: $time, user: $user) {
+  mutation addAppointmentv2($service: String, $year: String, $make: String, $model: String, $date: String, $time: String!, $user: ID!) {
+    addAppointmentv2(service: $service, year: $year, make: $make, model: $model, date: $date, time: $time, userId: $user) {
         appointmentv2 {
             _id
             service
