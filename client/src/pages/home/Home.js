@@ -63,11 +63,11 @@ const Home = () => {
               <hr className="service2"></hr>
               <h1 className="service">ENGINE REBUILD</h1>
               </div>
-              <div className="car-brands-child3">
+              {/* <div className="car-brands-child3">
               <video src= {mechanic3} autoPlay loop muted className="mechanic"/>
               <h1 className="service3">03</h1>
               <hr className="service2"></hr>
-              <h1 className="service">AUTO BODY</h1>
+              <h1 className="service">AUTO BODY</h1> */}
               </div>
               <div className="car-brands-child4">
               <video src= {mechanic4} autoPlay loop muted className="mechanic"/>
