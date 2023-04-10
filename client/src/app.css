@@ -147,20 +147,20 @@ font-size: 20px;
 } 
 
 @media only screen and (max-width: 600px) {
-  Styles for screens that are 600px or smaller
+  /*Styles for screens that are 600px or smaller*/
 .content {
     font-size: 20px;
   }
 } 
  @media only screen and (min-width: 601px) and (max-width: 900px) {
-   Styles for screens that are between 601px and 900px */
+   /*Styles for screens that are between 601px and 900px */
    .content {
     font-size: 25px;
   }
 }  
 
- @media only screen and (min-width: 901px) { */
-   Styles for screens that are 901px or larger */
+ @media only screen and (min-width: 901px) { 
+   /*Styles for screens that are 901px or larger */
    .content {
     font-size: 30px;
   }

@@ -10,7 +10,6 @@ import flags from '../../assets/flags.png';
 import rims from '../../assets/rims.png';
 import mechanic from '../../assets/mechanic.mp4';
 import mechanic2 from '../../assets/mechanic2.mp4';
-import mechanic3 from '../../assets/mechanic3.mp4';
 import mechanic4 from '../../assets/mechanic4.mp4';
 //import Contact from '../../pages/contactForm/Contact';
 
@@ -63,11 +62,11 @@ const Home = () => {
               <hr className="service2"></hr>
               <h1 className="service">ENGINE REBUILD</h1>
               </div>
-              <div className="car-brands-child3">
+              {/* <div className="car-brands-child3">
               <video src= {mechanic3} autoPlay loop muted className="mechanic"/>
               <h1 className="service3">03</h1>
               <hr className="service2"></hr>
-              <h1 className="service">AUTO BODY</h1>
+              <h1 className="service">AUTO BODY</h1> */}
               </div>
               <div className="car-brands-child4">
               <video src= {mechanic4} autoPlay loop muted className="mechanic"/>
@@ -77,7 +76,6 @@ const Home = () => {
               </div>
           </div>
           </div>
-        </div>
     )
 }
 
