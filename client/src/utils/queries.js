@@ -74,3 +74,27 @@ export const QUERY_APPOINTMENTS = gql`
     }
   }
 `;
+
+export const QUERY_SINGLE_APPOINTMENTV2 = gql`
+  query getSingleAppointmentv2($appointmentId: ID!) {
+    appointmentv2(appointmentId: $appointmentId) {
+      _id
+      date
+      time
+      vehicle
+      user
+    }
+  }
+`;
+
+export const QUERY_APPOINTMENTSV2 = gql`
+  query getAppointmentsv2 {
+    appointmentsv2 {
+      _id
+      date
+      time
+      vehicle
+      user
+    }
+  }
+`;
