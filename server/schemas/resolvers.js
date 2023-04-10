@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Vehicle, Appointment } = require("../models");
+const { User, Vehicle, Appointment, Appointmentv2 } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -68,6 +68,24 @@ const resolvers = {
         model: "Vehicle",
       });
     },
+
+    // Temporary appointmentv2 queries
+    //////////////////////////
+    appointmentsv2: async () => {
+      return Appointmentv2.find().populate({
+        path: "user",
+        model: "User"
+      });
+    },
+    // appointment will return a single appointment
+    appointmentv2: async (parent, { appointmentv2Id }) => {
+      return Appointmentv2.findOne({ appointmentv2Id }).populate({
+        path: "user",
+        model: "User"
+      });
+    },
+    //////////////////////////
+
     // me will return a single user and their vehicles
     me: async (parent, args, context) => {
       if (context.user) {
@@ -80,6 +98,9 @@ const resolvers = {
             path: "vehicle",
             model: "Vehicle",
           },
+        }).populate({
+          path: "appointmentsv2",
+          model: "Appointmentv2",
         });
       }
       throw new AuthenticationError("You need to be logged in!");
@@ -184,6 +205,53 @@ const resolvers = {
         return appointment;
       }
     },
+
+    // Temporary appointmentv2 mutations
+    //////////////////////////
+
+    addAppointmentv2: async (
+      parent,
+      { service, year, make, model, date, time, userId },
+      context
+    ) => {
+      if (context.user) {
+        // const vehicle = await Vehicle.findOne({vehicleId});
+        const appointmentv2 = await Appointmentv2.create({
+          service,
+          year,
+          make,
+          model,
+          date,
+          time,
+          user: userId,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { appointmentsv2: appointmentv2._id } }
+        );
+
+        return appointmentv2.populate("user");
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeAppointmentv2: async (parent, { appointmentv2Id }, context) => {
+      if (context.user) {
+        const appointmentv2 = await Appointmentv2.findOneAndDelete({
+          _id: appointmentv2Id,
+          userId: context.user._id,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { appointmentsv2: appointmentv2Id } }
+        );
+
+        return appointmentv2;
+      }
+    },
+
+    //////////////////////////
   },
 };
 
