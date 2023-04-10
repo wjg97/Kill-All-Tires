@@ -2,7 +2,7 @@
   "name": "practice-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://kill-all-tires.herokuapp.com",
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@emailjs/browser": "^3.10.0",
